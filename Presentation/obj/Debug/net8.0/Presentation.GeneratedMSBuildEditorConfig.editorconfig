@@ -1,0 +1,103 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Presentation
+build_property.RootNamespace = Presentation
+build_property.ProjectDir = D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\Presentation\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\Presentation
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Account/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Account/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Account/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/AddAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/AddPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkUGF0aWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/EditAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFwcG9pbnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/EditPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFBhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/ViewPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1BhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/ViewPatients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1BhdGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/ViewStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1N0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Admin/ViewStaffMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1N0YWZmTWVtYmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Doctor/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXGluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Nurse/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVyc2VcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Patient/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Patient/info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudFxpbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEPIProjects/OneDrive_2024-10-19/Group 4/DEPI-Hospital-Project-main_3/DEPI-Hospital-Project-main/src/Presentation/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fhvjq1vla1

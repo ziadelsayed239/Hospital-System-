@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Hospital - Patient Info";
+}
+
+<div id="main">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>Welcome, @ViewBag.Patient.firstName</h1>
+            <p>Your health is our priority</p>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <h2 class="mt-3 toggle-btn">Appointments History</h2>
+        <div class="table-responsive">
+            @if(ViewBag.Appointments.Count > 0)
+            {
+                <table class="table table-bordered" id="appointmentTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date and Time</th>
+                            <th>Wait Time</th>
+                            <th>Doctor</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                     <tbody>
+                        @foreach(var appointment in ViewBag.Appointments)
+                        {
+                            <tr>
+                                <td>@appointment.Id</td>
+                                <td>@appointment.Date</td>
+                                <td><a href="#" data-toggle="modal" data-target="#doctorModal">
+                                    Dr. @($"{appointment.Doctor.firstName} {appointment.Doctor.lastName}")
+                                </a></td>
+                                <td>15 mins</td>
+                                <td>@appointment.Type.ToString()</td>
+                                <td>@appointment.Status.ToString()</td>
+                            </tr>
+                        }
+                     </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No Appointments Found</p>
+            }
+        </div>
+     </div>
+</div>

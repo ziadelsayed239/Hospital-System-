@@ -1,0 +1,61 @@
+﻿@using Shared.DTO;
+@model EditStaffViewModel;
+<div id="main" class="NormalizeUpnormalHight">
+    <h1>Add New Patient</h1>
+    <form method="POST" asp-action="Edit">
+        <input type="hidden" asp-for="Id">
+
+        <div class="form-group">
+            <label asp-for="FirstName">First Name</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="FirstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Last Name</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="LastName">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="Email">
+        </div>
+        <div class="form-group">
+            <label asp-for="Username">Username</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="Username">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SocialNumber">Social Number</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="SocialNumber">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PhoneNumber">Phone Number</label>
+            <input type="tel" class="form-control" id="appointmentDateTime" asp-for="PhoneNumber">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Address">Address</label>
+            <input type="text" class="form-control" id="appointmentDateTime" asp-for="Address">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Gender">Gender</label>
+            <select class="form-control" id="Gender" asp-for="Gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Salary">Salary</label>
+            <input type="number" class="form-control" id="appointmentDateTime" asp-for="Salary">
+        </div>
+
+
+        <div class="form-group">
+            <a href="/Admin/ViewStaff" class="btn btn-secondary">Go Back</a>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+        <div asp-validation-summary="ModelOnly"></div>
+    </form>
+</div>

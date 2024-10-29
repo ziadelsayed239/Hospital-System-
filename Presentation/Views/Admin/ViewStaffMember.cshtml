@@ -1,0 +1,15 @@
+﻿<div class="modal-body">
+    <a class="btn btn-success" href="/Account/Edit?id=@ViewBag.Staff.data.Id">Edit</a>
+    <a class="btn btn-danger" href="/Account/Delete?id=@ViewBag.Staff.data.Id">Delete</a>
+
+    <br />
+    <br />
+    <br />
+    <p>Full Name: @(ViewBag.Staff.data.firstName + " " + ViewBag.Staff.data.lastName)</p>
+    <p>Role: @ViewBag.Staff.role</p>
+    <p>Social Number: @ViewBag.Staff.data.SocialNumber</p>
+    <p>Gender: @ViewBag.Staff.data.gender.ToString()</p>
+    <p>Address: @ViewBag.Staff.data.Address</p>
+    <p>PhoneNumber: @ViewBag.Staff.data.PhoneNumber</p>
+    <p>Salary: @ViewBag.Staff.data.Salary</p>
+</div>

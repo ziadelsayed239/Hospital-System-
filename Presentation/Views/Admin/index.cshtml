@@ -1,0 +1,282 @@
+@using Shared.DTO;
+@model PatientViewModel;
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Logout</a>
+      <a href="#">Q&A</a>
+      <a href="#">Support</a>
+      <!-- Add more links as needed -->
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="toggleNav()">☰</button>
+      <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <h1>Welcome, admin</h1>
+          <p>Your health is our priority</p>
+        </div>
+
+        <br />
+        <br />
+        <a class="btn btn-primary" href="/Admin/ViewStaff">Show Staff Members</a>
+        <br />
+        <br />
+        <a class="btn btn-success" href="/Admin/ViewPatients">Show Patients</a>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"></script>
+    <script>
+      function toggleNav() {
+        var sidebar = document.getElementById('mySidebar');
+        var main = document.getElementById('main');
+        if (sidebar.style.width === '250px' || sidebar.style.width === '100%') {
+          sidebar.style.width = '0';
+          main.style.marginLeft = '0';
+        } else {
+          sidebar.style.width = window.innerWidth <= 768 ? '100%' : '250px';
+          main.style.marginLeft = window.innerWidth <= 768 ? '0' : '250px';
+        }
+      }
+
+      function closeNav() {
+        document.getElementById('mySidebar').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+
+      $(document).ready(function () {
+        $('.toggle-btn').click(function () {
+          var content = $(this).next('.content');
+          content.toggleClass('visible');
+          $(this).text(
+            content.hasClass('visible')
+              ? $(this).text().replace('▽', '△')
+              : $(this).text().replace('△', '▽')
+          );
+        });
+      });
+      function backdropFirstModal() {
+    $('#addAppointmentModal').modal('toggle');
+    setTimeout(function() {
+      $('#addAppointmentModal').modal('show').addClass('backdroped-modal');
+      //  $('#AddSystemUserModal').modal('show').addClass('backdroped-modal');
+    }, 500);
+  }
+
+  $('#addDoctorModal').on('hidden.bs.modal', function () {
+    $('#addAppointmentModal').removeClass('backdroped-modal');
+    // $('#AddSystemUserModal').removeClass('backdroped-modal');
+  });
+
+
+
+  function setupTablePaginationAndSearch(tableSelector, paginationSelector) {
+  document.addEventListener('DOMContentLoaded', function() {
+    var rowsPerPage = 5;
+    var table = document.querySelector(tableSelector);
+    var rows = Array.from(table.querySelectorAll('tbody tr'));
+    var searchFields = [];
+
+    // Collect search fields dynamically based on the table headers
+    table.querySelectorAll('thead th').forEach((th) => {
+      searchFields.push(th.innerText.trim().toLowerCase());
+    });
+
+    // Create an array of row data for Fuse.js
+    var rowData = rows.map(function(row) {
+      return {
+        element: row,
+        ...Array.from(row.children).reduce((acc, cell, index) => {
+          acc[searchFields[index]] = cell.innerText;
+          return acc;
+        }, {})
+      };
+    });
+
+    // Fuse.js options
+    var options = {
+      includeScore: true,
+      keys: searchFields,
+      threshold: 0.3
+    };
+
+    var fuse = new Fuse(rowData, options);
+
+    function showPage(page, filteredRows = rowData) {
+      var start = (page - 1) * rowsPerPage;
+      var end = start + rowsPerPage;
+
+      // Hide all rows
+      rows.forEach(row => row.style.display = 'none');
+
+      // Show only the rows for the current page
+      filteredRows.slice(start, end).forEach(row => row.element.style.display = '');
+    }
+
+    function searchTable(changedField) {
+      var results = rowData;
+
+      searchFields.forEach((field) => {
+        var searchValue = document.getElementById(field + 'Search').value.trim().toLowerCase();
+        if (searchValue) {
+          results = fuse.search(searchValue).map(result => result.item);
+        }
+      });
+
+      showPage(1, results);
+      updatePagination(results);
+    }
+
+    function updatePagination(filteredRows = rowData) {
+      var totalPages = Math.ceil(filteredRows.length / rowsPerPage);
+      var pagination = document.querySelector(paginationSelector);
+      pagination.innerHTML = '';
+
+      for (var i = 1; i <= totalPages; i++) {
+        var pageItem = document.createElement('li');
+        pageItem.classList.add('page-item');
+        pageItem.setAttribute('data-page', i);
+        pageItem.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+
+        pageItem.addEventListener('click', function(e) {
+          e.preventDefault();
+          var page = parseInt(this.getAttribute('data-page'));
+          showPage(page, filteredRows);
+
+          Array.from(pagination.children).forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+        });
+
+        pagination.appendChild(pageItem);
+      }
+
+      if (pagination.children.length > 0) {
+        pagination.children[0].classList.add('active');
+      }
+    }
+
+    function debounce(func, delay) {
+      let timeout;
+      return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, arguments), delay);
+      };
+    }
+
+    const debouncedSearch = debounce(searchTable, 300);
+
+    // Create search inputs dynamically
+    searchFields.forEach((field) => {
+      var searchInput = document.createElement('input');
+      searchInput.type = 'text';
+      searchInput.id = field + 'Search';
+      searchInput.placeholder = `Search ${field.charAt(0).toUpperCase() + field.slice(1)}`;
+      
+      searchInput.addEventListener('input', function() {
+        // Clear other search fields when one is typed into
+        searchFields.forEach((f) => {
+          if (f !== field) {
+            document.getElementById(f + 'Search').value = '';
+          }
+        });
+
+        debouncedSearch(field);
+      });
+
+      // Create a th for the search input
+      var th = document.createElement('th');
+      th.appendChild(searchInput);
+      table.querySelector('thead tr:nth-child(2)').appendChild(th);
+    });
+
+    // Initialize pagination and show the first page
+    showPage(1);
+    updatePagination();
+  });
+}
+
+// Usage: Call the function with your table selector and pagination selector
+setupTablePaginationAndSearch('#appointmentTable', '#pagination');
+setupTablePaginationAndSearch('#systemUsersTable', '#paginationUsers');
+
+// sort filter
+document.addEventListener('DOMContentLoaded', function() {
+    const table = document.getElementById('appointmentTable');
+    const headers = table.querySelectorAll('th:not(:last-child)'); // Exclude last column (Type)
+    const rows = Array.from(table.querySelectorAll('tbody tr')); // Store all rows
+    let currentSortColumn = null; // Track the current sorted column
+    let currentSortDirection = 'none'; // Track sort direction
+
+    // Function to sort the table
+    function sortTable(columnIndex, direction) {
+      const sortedRows = [...rows]; // Create a copy to avoid mutating the original rows array
+
+      sortedRows.sort((a, b) => {
+        
+        const aText = a.children[columnIndex].innerText.toLowerCase();
+        const bText = b.children[columnIndex].innerText.toLowerCase();
+        // console.log(aText)
+
+        if (direction === 'asc') {
+          return aText.localeCompare(bText);
+        } else if (direction === 'desc') {
+          return bText.localeCompare(aText);
+        }
+        return 0; // No sorting
+      });
+
+      // Update the table body with sorted rows
+      const tbody = table.querySelector('tbody');
+      tbody.innerHTML = '';
+      sortedRows.forEach(row => tbody.appendChild(row));
+    }
+
+    // Click event for sorting
+    headers.forEach((header, index) => {
+      // Create a span for the sorting indicator
+      const indicatorSpan = document.createElement('span');
+      indicatorSpan.style.marginLeft = '5px'; // Add some space between text and indicator
+      header.appendChild(indicatorSpan);
+
+      header.addEventListener('click', function() {
+        // Determine new sort direction
+        let newSortDirection;
+        if (currentSortColumn === index) {
+          if (currentSortDirection === 'asc') {
+            newSortDirection = 'desc';
+          } else if (currentSortDirection === 'desc') {
+            newSortDirection = 'none';
+          } else {
+            newSortDirection = 'asc';
+          }
+        } else {
+          newSortDirection = 'asc'; // Reset to ascending if a new column is clicked
+        }
+
+        // Clear previous indicators
+        headers.forEach((h) => {
+          const span = h.querySelector('span');
+          if (span) {
+            span.textContent = ''; // Remove previous indicators
+          }
+        });
+
+        // Set the new indicator
+        if (newSortDirection === 'asc') {
+          indicatorSpan.textContent = '△'; // Ascending indicator
+        } else if (newSortDirection === 'desc') {
+          indicatorSpan.textContent = '▽'; // Descending indicator
+        }
+
+        // Sort the table based on the new direction
+        sortTable(index, newSortDirection);
+
+        // Update current sort column and direction
+        currentSortColumn = index;
+        currentSortDirection = newSortDirection;
+      });
+    });
+  });
+
+</script>

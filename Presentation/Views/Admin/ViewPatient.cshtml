@@ -1,0 +1,16 @@
+﻿<div class="modal-body">
+    <a class="btn btn-secondary" href="/Admin/ViewPatients">Go Back</a>
+    <a class="btn btn-primary" href="/Admin/AddAppointment?patientId=@ViewBag.Patient.Id">Add New Appointment</a>
+    <a class="btn btn-success" href="/Admin/EditPatient?id=@ViewBag.Patient.Id">Edit Patient</a>
+    <a class="btn btn-danger" href="/Admin/DeletePatient?id=@ViewBag.Patient.Id">Delete Patient</a>
+    <br />
+
+    <p>Full Name: @(ViewBag.Patient.firstName + " " + ViewBag.Patient.lastName)</p>
+    <p>Social Number: @ViewBag.Patient.SocialNumber</p>
+    <p>Gender: @ViewBag.Patient.gender.ToString()</p>
+    <p>Address: @ViewBag.Patient.Address</p>
+    <p>PhoneNumber: @ViewBag.Patient.PhoneNumber</p>
+    <p>Emergency Contact Name: @ViewBag.Patient.EmergencyContactName</p>
+    <p>Emergency Contact Relationship: @ViewBag.Patient.EmergencyContactRelationship</p>
+    <p>Emergency Contact Phone: @ViewBag.Patient.EmergencyContactPhone</p>
+</div>

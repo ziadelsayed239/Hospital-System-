@@ -1,0 +1,17 @@
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\DataAccess.dll
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\Shared.dll
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\bin\Debug\net8.0\Shared.pdb
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.dll
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+D:\DEPIProjects\OneDrive_2024-10-19\Group 4\DEPI-Hospital-Project-main_3\DEPI-Hospital-Project-main\src\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

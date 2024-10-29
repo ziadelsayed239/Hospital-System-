@@ -1,0 +1,38 @@
+﻿<div class="table-responsive">
+    <a class="btn btn-success" href="/Account/SignUp">Add New Staff Member</a>
+    <table class="table table-bordered" id="systemUsersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full name</th>
+                <th>Role</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <!-- Search inputs will be added dynamically -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in ViewBag.Staff)
+            {
+                <tr>
+                    <td>@member.data.Id</td>
+                    <td>@(member.data.firstName + " " + member.data.lastName)</td>
+                    <td>@member.role</td>
+                    <td>@member.data.Email</td>
+                    <td>@member.data.PhoneNumber</td>
+                    <td>
+                        <a href="/Admin/ViewStaffMember?id=@member.data.Id">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center" id="paginationUsers">
+            <!-- Pagination items will be generated dynamically -->
+        </ul>
+    </nav>
+</div>

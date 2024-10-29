@@ -1,0 +1,24 @@
+﻿@model Shared.DTO.PatientSignInViewModel;
+@{
+    ViewData["Title"] = "Hospital - Patient";
+}
+
+<div class="background-image"></div>
+<div id="container">
+    <form asp-action="Index" method="POST">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" asp-for="SocialNumber">National Id</label>
+            <input type="text"
+                   id="form2Example1"
+                   asp-for="SocialNumber"
+                   class="form-control"
+                   placeholder="type your national Id here.."
+                   value="1234567890"
+                   autofocus />
+            <span asp-validation-for="SocialNumber"></span>
+        </div>
+            <button type="submit" class="btn btn-primary btn-block mb-4"> Sign in </button>
+    </form>
+    <a href="/Account/SignIn">I'm a Staff Member</a>
+</div>
